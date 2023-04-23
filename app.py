@@ -10,6 +10,22 @@ model_3 =pickle.load(open('model_3.pkl','rb'))
 def index():
     return render_template('index.html')
 
+@app.route('/contacts')
+def contacts():
+    return render_template('contacts.html')
+
+@app.route('/projects')
+def projects():
+    return render_template('projects.html')
+
+@app.route('/services')
+def services():
+    return render_template('services.html')
+
+@app.route('/testimonials')
+def testimonials():
+    return render_template('testimonials.html')
+
 @app.route('/predict', methods=['GET','POST'])
 def predict():
     a=float(request.form['a'])
