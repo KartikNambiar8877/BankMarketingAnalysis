@@ -63,7 +63,10 @@ def predict():
     prediction_1 = model_1.predict(input_data)
     prediction_2 = model_2.predict(input_data)
     prediction_3 = model_3.predict(input_data)
-    print(prediction,prediction_1,prediction_2,prediction_3)
-    return render_template('index.html')
+    total_prediction= prediction+prediction_1+prediction_2+prediction_3
+    print(total_prediction)
+    if total_prediction>=2:
+        return render_template('yes.html')
+    return render_template('no.html')
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
