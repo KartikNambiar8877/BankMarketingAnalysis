@@ -1,2 +1,2 @@
 # BankMarketingAnalysis
-Bank Marketing System which predicts whether customer will go for loan or not.
+Bank Marketing System which predicts whether a customer will be part of a marketing campaign or not.
