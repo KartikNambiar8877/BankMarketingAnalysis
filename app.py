@@ -28,35 +28,35 @@ def testimonials():
 
 @app.route('/predict', methods=['GET','POST'])
 def predict():
-    a=float(request.form['a'])
-    b=float(request.form['b'])
-    c=int(request.form['c'])
-    d=float(request.form['d'])
-    e=int(request.form['e'])
-    f=int(request.form['f'])
-    g=int(request.form['g'])
+    a=0
+    b=0
+    c=0
+    d=0
+    e=0
+    f=0
+    g=0
     h=float(request.form['h'])
     i=int(request.form['i'])
     j=float(request.form['j'])
-    k=int(request.form['k'])
-    l=int(request.form['l'])
-    m=int(request.form['m'])
-    n=int(request.form['n'])
-    o=int(request.form['o'])
-    p=int(request.form['p'])
-    q=int(request.form['q'])
-    r=int(request.form['r'])
-    s=int(request.form['s'])
-    t=int(request.form['t'])
-    u=int(request.form['u'])
-    v=int(request.form['v'])
-    w=int(request.form['w'])
-    x=int(request.form['x'])
-    y=int(request.form['y'])
-    z=int(request.form['z'])
-    a1=int(request.form['a1'])
-    a2=int(request.form['a2'])
-    a3=int(request.form['a3'])
+    k=0
+    l=0
+    m=0
+    n=0
+    o=0
+    p=0
+    q=0
+    r=0
+    s=0
+    t=0
+    u=0
+    v=0
+    w=0
+    x=0
+    y=0
+    z=int(request.form['i'])
+    a1=0
+    a2=0
+    a3=0
     input_data = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,a1,a2,a3]
     input_data = np.array(input_data).reshape(1, -1)
     prediction = model.predict(input_data)
@@ -69,4 +69,4 @@ def predict():
         return render_template('yes.html')
     return render_template('no.html')
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    app.run(host='26.144.125.240',port=5000, debug=True)
